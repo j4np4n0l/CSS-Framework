@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>CSS Framework</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link href="https://cdn.jsdelivr.net/npm/modern-normalize@v2.0.0/modern-normalize.min.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="css/fade-in.css" />
+  <link rel="stylesheet" type="text/css" href="css/style.css" />
+  <link rel="stylesheet" type="text/css" href="css/menu.css" />
+  <link rel="stylesheet" type="text/css" href="css/responsive.css" />
+  <link rel="stylesheet" type="text/css" href="css/custom.css" />
+<!--   <link rel="icon" href="favicon.png"> -->
+</head>
+<body>
+  <div id="fadein"></div>
+  <header class="fixed outer-shadow">
+    <div id="header">
+      <div id="logo">
+        <a href="#">LOGO</a>
+      </div>
+      <nav class="nav" id="nav">
+        <a href="#menu-item-1">Menu Item 1</a>
+        <a href="#menu-item-2">Menu Item 2</a>
+        <a href="#menu-item-3">Menu Item 3</a>
+      </nav>
+      <a href="javascript:void(0);" id="menu-toggle" onclick="togglemenu()">
+          <div class="menu-toggle__bar1"></div>
+          <div class="menu-toggle__bar2"></div>
+          <div class="menu-toggle__bar3"></div>
+      </a>
+  </div>
+  </header>
+
+  <main>
+<!-- HERO SECTION -->
+    <section id="hero" class="fullpage">
+      <div class="row">
+        <div class="column">
+          <h1>Cas&shy;cading Style <span class="inline-block">Sheets Frame&shy;work</span></h1>
+          <p class="hero-caption">Est sit amet facilisis magna etiam tempor orci. Nullam ac tortor vitae purus faucibus ornare suspendisse sed. Sem nulla pharetra diam sit amet. Leo a diam sollicitudin tempor.</p>
+          <div class="multibtn-container">
+            <a href="#" class="btn btn-slide">Learn More</a>
+            <a href="#" class="btn btn-transparent btn-slide-reverse">Contact Us</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+<!-- 2-COLMUN SECTION -->
+    <section>
+      <div class="row gap-3">
+        <div class="column col-2 vertical-align">
+          <h2>Condi&shy;mentum lacinia quis vel</h2>
+          <p>Dui faucibus in ornare quam viverra orci sagittis eu. Consectetur a erat nam at. Sed adipiscing diam donec adipiscing tristique risus. Maecenas accumsan lacus vel facilisis volutpat est velit egestas. Elementum sagittis vitae et leo duis. Ac felis donec et odio pellentesque diam volutpat. Aliquam vestibulum morbi blandit cursus. Elementum nisi quis eleifend quam adipiscing vitae proin sagittis. Arcu vitae elementum curabitur vitae nunc sed velit dignissim sodales.</p>
+          <p>Ac auctor augue mauris augue neque gravida in. Euismod nisi porta lorem mollis aliquam ut porttitor leo a. Nunc vel risus commodo viverra maecenas. Semper viverra nam libero justo laoreet sit amet cursus sit.</p>
+        </div>
+        <div class="column col-2 vertical-align">
+          <div class="img-container img-cover">
+            <img src="https://www.elegantthemes.com/images/divi-ai/ai-image-ex-03.jpg">
+          </div>
+        </div>
+      </div>
+    </section>
+
+<!-- 3-COLMUN SECTION -->
+    <section></section>
+
+  </main>
+
+  <footer>
+    <small>© 2023 Your company name. All Rights Reserved.</small>
+  </footer>
+  <script src="js/fade-in.js"></script>
+  <script src="js/toggle-menu.js"></script>
+  <script src="js/functions.js"></script>
+</body>
+</html>

@@ -1,0 +1,172 @@
+:root {
+	--color1: black;
+	--color2: white;
+	--color3: lightgrey;
+	--color-accent: crimson;
+
+	--default-font-size: 1.125em;
+	--h1-fs-desktop: 3.5rem;
+	--h1-fs-tablet: 3rem;
+	--h1-fs-mobile: 2.5rem;
+
+	--h2-fs-desktop: 3.125rem;
+	--h2-fs-tablet: 2.75rem;
+	--h2-fs-mobile: 2.125rem;
+
+	--hover-transition: all 0.3s;
+
+	--hero-background: url("https://warszawskiul.com/wp-content/uploads/2021/09/UL_Mokotow_02-2048x1360.jpg");
+	--image-placeholder: url(https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Placeholder_view_vector.svg/681px-Placeholder_view_vector.svg.png);
+}
+
+a, a:visited, p { 
+	text-decoration: none;
+	color: var(--color1);
+	font-size: var(--default-font-size);
+	line-height: 1.4em;
+}
+a:hover { 
+	color: var(--color-accent);
+	transition: 0.3s;
+}
+h1, h2, h3 { 
+	line-height: 1.2em; 
+	color: var(--color1); 
+	margin: 0; 
+	hyphens: auto;
+	-webkit-hyphenate-character: "-";
+  	hyphenate-character: "-";
+}
+h1 { font-size: var(--h1-fs-desktop); font-weight: 700; }
+h2 { font-size: var(--h2-fs-desktop); font-weight: 700; }
+h3 { line-height: 1.2em; font-weight: 600; }
+
+section { 
+	display: flex;
+    flex-direction: column;
+    justify-content: center;
+	padding: 5.5em 0;
+}
+
+.row { display: flex; 
+	margin: 0 auto; 
+	max-width: 80%; 
+}
+
+section.gap-1, .row.gap-1 { gap: 1em; }
+section.gap-2, .row.gap-2 { gap: 2em; }
+section.gap-3, .row.gap-3 { gap: 3em; }
+section.gap-4, .row.gap-4 { gap: 4em; }
+section.gap-5, .row.gap-5 { gap: 5em; }
+
+.column { width: 100%; }
+.column.col-2 { width: 50%; }
+
+.inline-block {
+	display: inline-block;
+}
+
+#hero {
+	height: calc(70vh - 103px);
+	background-image: var(--image-placeholder);
+	background-position: center;
+	background-repeat: no-repeat; 
+ 	background-size: cover;
+	text-align: center;
+	display: flex;
+    align-items: center;
+}
+#hero.fullpage {
+	height: calc(100vh - 103px);
+}
+#hero h1 {
+	margin-bottom: 0.25em;
+	color: var(--color2);
+}
+
+.hero-caption {
+	font-size: 1.5em;
+	font-weight: 400;
+	color: var(--color2);
+	max-width: 992px;
+	margin: 0 auto;
+}
+
+.multibtn-container {
+	margin-top: 2.5rem;
+	display: block;
+}
+.multibtn-container {
+	display: flex;
+	margin-top: 2.5rem;
+	justify-content: center;
+    gap: 1.5rem;
+}
+a.btn {
+	text-transform: uppercase;
+	color: var(--color2);
+	font-weight: 500;
+	padding: 0.75em;
+	background-color: var(--color-accent);
+	border: 3px solid var(--color-accent);
+	min-width: 10em;
+}
+a.btn-transparent {
+	background-color: transparent;
+	backdrop-filter: blur(0.1em);
+	border: 3px solid var(--color-accent);
+}
+.btn-fade { transition: 0.3s all; }
+.btn-fade:hover { opacity: 0.85; }
+
+a.btn-slide {
+	border-radius: 0px;
+	box-shadow: inset 400px 0 0 0 var(--color-accent);
+	-webkit-transition: ease-out 0.3s;
+	-moz-transition: ease-out 0.3s;
+	transition: ease-out 0.3s;
+}
+a.btn-slide:hover {
+	background-color: transparent;
+	backdrop-filter: blur(0.1em);
+	box-shadow: inset 0 0 0 0 var(--color-accent);
+}
+a.btn-slide-reverse {
+	border-radius: 0px;
+	box-shadow: inset 0 0 0 0 var(--color-accent);
+	-webkit-transition: ease-out 0.3s;
+	-moz-transition: ease-out 0.3s;
+	transition: ease-out 0.3s;
+}
+a.btn-slide-reverse:hover {
+	box-shadow: inset 400px 0 0 0 var(--color-accent);
+}
+
+.img-container {
+	margin: 0 auto;
+}
+.img-container img { width: 100%; }
+
+.img-cover {
+    display: flex;
+    justify-content: center;
+	background: var(--image-placeholder);
+	background-position: center;
+	background-repeat: no-repeat; 
+ 	background-size: cover;
+ 	width: 100%;
+ 	height: 100%;
+}
+.img-cover img { 
+	opacity: 0; 
+	width: auto; 
+}
+
+.vertical-align {
+	display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.padding-1 { padding: 1rem; }
+.padding-2 { padding: 2rem; }
+.padding-3 { padding: 3rem; }
