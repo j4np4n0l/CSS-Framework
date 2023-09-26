@@ -24,6 +24,7 @@ a, a:visited, p {
 	color: var(--color1);
 	font-size: var(--default-font-size);
 	line-height: 1.4em;
+	margin: 0 0 1em 0;
 }
 a:hover { 
 	color: var(--color-accent);
@@ -32,7 +33,7 @@ a:hover {
 h1, h2, h3 { 
 	line-height: 1.2em; 
 	color: var(--color1); 
-	margin: 0; 
+	margin: 0 0 0.75em 0;
 	hyphens: auto;
 	-webkit-hyphenate-character: "-";
   	hyphenate-character: "-";
@@ -43,8 +44,9 @@ h3 { line-height: 1.2em; font-weight: 600; }
 
 section { 
 	display: flex;
-    flex-direction: column;
-    justify-content: center;
+	flex-direction: column;
+	justify-content: center;
+    align-items: center;
 	padding: 5.5em 0;
 }
 
