@@ -1,7 +1,19 @@
+/*COLOR PREFERENCES*/
+
+/*Header background*/
+header { background-color: var(--color-primary); }
+
+/*Logo color*/
+#logo, #logo a { color: var(--color-white); }
+#logo, #logo a:hover { color: var(--color-accent); }
+
+/*Menu link color*/
+#nav a { color: var(--color-white); }
+#nav a:hover { color: var(--color-accent); }
+
 header {
   display: flex;
   justify-content: center;
-  background-color: var(--color3);
   position: relative;
   z-index: 90;
 }
@@ -75,6 +87,7 @@ header #header {
   a#menu-toggle {
     float: right;
     display: block; 
+    margin: auto;
   } 
   .nav.nav--open {
     position: absolute;
@@ -84,7 +97,7 @@ header #header {
     padding: 1.5em;
     flex-direction: column;
     row-gap: 2em !important;
-    background-color: var(--color2);
+    background-color: var(--color-secondary);
     transform: scale(0);
     transition: 0.3s all;
   }
@@ -97,5 +110,6 @@ header #header {
     float: none;
     display: block;
     text-align: left; 
-    } 
+    margin: 0;
+  } 
 }

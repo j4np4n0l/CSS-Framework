@@ -7,6 +7,8 @@
 }
 
 @media only screen and (max-width: 992px) {
+	h1 { font-size: var(--h1-fs-tablet); font-weight: 700; }
+	h2 { font-size: var(--h2-fs-tablet); font-weight: 700; }
 	#logo a { font-size: 4vw; }
 	.row { flex-direction: column; 	}
 	.column.col-2 { width: 100%; }
@@ -14,6 +16,9 @@
 }
 
 @media only screen and (max-width: 767px) {
+	h1 { font-size: var(--h1-fs-mobile); font-weight: 700; }
+	h2 { font-size: var(--h2-fs-mobile); font-weight: 700; }
+	a, a:visited, p { font-size: 1em;}
 	#logo a { font-size: 7vw; }
 }
 

@@ -1,8 +1,11 @@
 :root {
-	--color1: black;
-	--color2: white;
-	--color3: lightgrey;
-	--color-accent: crimson;
+	--color-primary: #20597E;
+	--color-secondary: #4797BC;
+	--color-accent: #64B9D8;
+	--color-white: #fcfcfc;
+	--color-black: #313131;
+	--color-text: #313131;
+	--color-link: #20597E;
 
 	--default-font-size: 1.125em;
 	--h1-fs-desktop: 3.5rem;
@@ -21,19 +24,20 @@
 
 a, a:visited, p { 
 	text-decoration: none;
-	color: var(--color1);
+	color: var(--color-text);
 	font-size: var(--default-font-size);
 	line-height: 1.4em;
 	margin: 0 0 1em 0;
 }
+a, a:visited { color: var(--color-link); margin: 0; }
 a:hover { 
 	color: var(--color-accent);
 	transition: 0.3s;
 }
 h1, h2, h3 { 
 	line-height: 1.2em; 
-	color: var(--color1); 
-	margin: 0 0 0.75em 0;
+	color: var(--color-primary); 
+	margin: 0 0 0.5em 0;
 	hyphens: auto;
 	-webkit-hyphenate-character: "-";
   	hyphenate-character: "-";
@@ -43,10 +47,10 @@ h2 { font-size: var(--h2-fs-desktop); font-weight: 700; }
 h3 { line-height: 1.2em; font-weight: 600; }
 
 section { 
-	display: flex;
+	/*display: flex;
 	flex-direction: column;
 	justify-content: center;
-    align-items: center;
+    align-items: center;*/
 	padding: 5.5em 0;
 }
 
@@ -63,6 +67,8 @@ section.gap-5, .row.gap-5 { gap: 5em; }
 
 .column { width: 100%; }
 .column.col-2 { width: 50%; }
+.column.col-3 { flex: 1 }
+.column.col-4 { flex: 1 }
 
 .inline-block {
 	display: inline-block;
@@ -83,20 +89,20 @@ section.gap-5, .row.gap-5 { gap: 5em; }
 }
 #hero h1 {
 	margin-bottom: 0.25em;
-	color: var(--color2);
+	color: var(--color-primary);
 }
 
 .hero-caption {
 	font-size: 1.5em;
 	font-weight: 400;
-	color: var(--color2);
+	color: var(--color-text);
 	max-width: 992px;
 	margin: 0 auto;
 }
 
-.multibtn-container {
-	margin-top: 2.5rem;
+.btn-container {
 	display: block;
+	margin-top: 1rem;
 }
 .multibtn-container {
 	display: flex;
@@ -105,15 +111,19 @@ section.gap-5, .row.gap-5 { gap: 5em; }
     gap: 1.5rem;
 }
 a.btn {
+	display: block;
 	text-transform: uppercase;
-	color: var(--color2);
+	text-align: center;
+	color: var(--color-text);
 	font-weight: 500;
 	padding: 0.75em;
 	background-color: var(--color-accent);
 	border: 3px solid var(--color-accent);
+	border-radius: 3px;
 	min-width: 10em;
 }
 a.btn-transparent {
+	border-radius: 3px;
 	background-color: transparent;
 	backdrop-filter: blur(0.1em);
 	border: 3px solid var(--color-accent);
@@ -122,7 +132,6 @@ a.btn-transparent {
 .btn-fade:hover { opacity: 0.85; }
 
 a.btn-slide {
-	border-radius: 0px;
 	box-shadow: inset 400px 0 0 0 var(--color-accent);
 	-webkit-transition: ease-out 0.3s;
 	-moz-transition: ease-out 0.3s;
@@ -162,6 +171,7 @@ a.btn-slide-reverse:hover {
 .img-cover img { 
 	opacity: 0; 
 	width: auto; 
+	max-height: 500px;
 }
 
 .vertical-align {
@@ -172,3 +182,68 @@ a.btn-slide-reverse:hover {
 .padding-1 { padding: 1rem; }
 .padding-2 { padding: 2rem; }
 .padding-3 { padding: 3rem; }
+
+.material-icons {
+	color: var(--color-accent);
+}
+
+.material-icons.round {
+	width: fit-content;
+    border-radius: 50px;
+    background-color: var(--color-accent);
+    color: var(--color-text);
+}
+
+.material-icons.square {
+	padding: 0.75rem;
+	width: fit-content;
+    border-radius: 10px;
+    background-color: var(--color-accent);
+    color: var(--color-text);
+}
+
+.column:has(.blurb) {
+    display: flex;
+    flex-wrap: wrap;
+}
+.blurb {
+	display: flex;
+	flex-direction: column;
+	gap: 1em;
+	padding: 2em;
+	position: relative;
+	background-color: var(--color-primary);
+}
+.blurb.center {
+	align-items: center;
+}
+.blurb.center>.title, .blurb.center>.description {
+	text-align: center;
+}
+.blurb .material-icons {
+	font-size: 5em;	
+	margin-bottom: 1rem;
+}
+.blurb .title {
+	color: var(--color-primary);
+	font-size: 1.5em;
+	font-weight: 600;
+}
+.blurb .description {
+	margin: 0;
+	color: var(--color-text);
+}
+.blurb:has(.btn-container) {
+	padding-bottom: 8em;
+}
+.blurb .btn-container {
+	position: absolute;
+    bottom: 2em;
+}
+.box-shadow {
+	box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.05);
+	transition: 0.3s all;
+}
+.box-shadow.shadow:hover {
+	box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.08);
+}

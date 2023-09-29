@@ -41,8 +41,6 @@ const inlineStyle = () => {
 }
 
 
-
-
 // Fixed header (header.fixed) & Fullpage hero (#hero.fullpage)
 const headerHeightChange = () => {
 	const main = document.querySelector('main');
