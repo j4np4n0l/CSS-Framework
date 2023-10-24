@@ -1,4 +1,4 @@
-.column { border: 1px solid; }
+/*.column { border: 1px solid; }*/
 
 @media only screen and (max-width: 1366px) {
 	header #header, section .row {
@@ -12,6 +12,8 @@
 	#logo a { font-size: 4vw; }
 	.row { flex-direction: column; 	}
 	.column.col-2 { width: 100%; }
+	.row:has(.column.col-4) { flex-direction: row; flex-wrap: wrap; }
+	.column.col-4 { display: flex; flex-basis: 50%; }
 	.img-container img { background: transparent; }
 }
 
@@ -20,6 +22,8 @@
 	h2 { font-size: var(--h2-fs-mobile); font-weight: 700; }
 	a, a:visited, p { font-size: 1em;}
 	#logo a { font-size: 7vw; }
+	.column.col-4 { flex-basis: 100%; display: block; }
+	.row:has(.column.col-4) { flex-direction: column; }
 }
 
 @media only screen and (max-width: 480px) {

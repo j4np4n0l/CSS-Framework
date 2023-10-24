@@ -1,27 +1,5 @@
-// Data attribute for adding inline style for user-defined padding and margin
-// Custom inline style (padding="value", margin="value") 
-// const inlineStyle = (element, data_attr1, data_attr2) => {
-// 	const elements = document.querySelectorAll(element);
-	
-// 	let element_count = 0;
 
-// 	elements.forEach((element_tag) => {
-// 		element_count++;
-
-// 		padding = element_tag.getAttribute(data_attr1);
-// 		margin = element_tag.getAttribute(data_attr2);
-
-// 		if (padding) {
-// 			element_tag.style.padding = padding;	
-// 		}
-
-// 		if (margin) {
-// 			element_tag.style.margin = margin;	
-// 		}
-
-// 	});
-// }
-
+// Data attribute for adding inline style 
 const inlineStyle = () => {
 	const elements = document.querySelectorAll( 'body *' );
 
@@ -81,6 +59,36 @@ const imgAutoresize = () => {
 
 const clog = (logtext) => {
 	console.log(logtext);
+}
+
+
+// Calculate the flex-basis value 
+const cols = document.querySelectorAll('.col-4');
+cols.forEach((col) => {
+	if (col.style.flexBasis = '50%') {
+	    if (col.parentNode.classList.contains('gap-5')) {
+	    	calcFlexBasis(col);
+	    } 
+	    if (col.parentNode.classList.contains('gap-4')) {
+	    	calcFlexBasis(col);
+	    } 
+	    if (col.parentNode.classList.contains('gap-3')) {
+	    	calcFlexBasis(col);
+	    } 
+	    if (col.parentNode.classList.contains('gap-2')) {
+	    	calcFlexBasis(col);
+	    } 
+	    if (col.parentNode.classList.contains('gap-1')) {
+	    	calcFlexBasis(col);
+	    }
+	} 
+});
+
+function calcFlexBasis(col) {
+	const row = col.parentNode;
+	const computedStyles = window.getComputedStyle(row);
+	const getGap = computedStyles.getPropertyValue('gap');
+	col.style.flexBasis = `calc(50% - ${getGap} )`;
 }
 
 window.addEventListener('DOMContentLoaded', headerHeightChange);

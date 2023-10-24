@@ -7,6 +7,8 @@
 	--color-text: #313131;
 	--color-link: #20597E;
 
+	--menu-toggle__bar: #ffffff;
+
 	--default-font-size: 1.125em;
 	--h1-fs-desktop: 3.5rem;
 	--h1-fs-tablet: 3rem;
@@ -67,8 +69,8 @@ section.gap-5, .row.gap-5 { gap: 5em; }
 
 .column { width: 100%; }
 .column.col-2 { width: 50%; }
-.column.col-3 { flex: 1 }
-.column.col-4 { flex: 1 }
+.column.col-3 	{ flex: 1 }
+.column.col-4 { display: flex; flex-wrap: wrap; flex: 1 }
 
 .inline-block {
 	display: inline-block;

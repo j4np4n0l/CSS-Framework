@@ -1,0 +1,9 @@
+.column.col-4 .blurb {
+	background-color: transparent;
+	border-radius: 3px;
+	box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.1);
+}
+.column.col-4 .blurb .title,
+.column.col-4 .blurb .description {
+	color: var(--color-black);
+}
