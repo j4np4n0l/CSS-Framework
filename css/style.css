@@ -249,3 +249,25 @@ a.btn-slide-reverse:hover {
 .box-shadow.shadow:hover {
 	box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.08);
 }
+
+#scrollToTop {
+	transform: scale(0);
+    display: block;
+    position: fixed;
+    bottom: 10vh;
+    right: 0.75vw;
+    z-index: 999;
+    transition: 1s all;
+}
+.scroll.icon span {
+    display: block;
+    width: 3rem;
+    height: 3rem;
+    text-align: center;
+	color: var(--color-white);
+    background-color: var(--color-secondary);
+    font-size: 2em;
+    padding: 0.35rem;
+    border-radius: 50px;
+    cursor: pointer;
+}
